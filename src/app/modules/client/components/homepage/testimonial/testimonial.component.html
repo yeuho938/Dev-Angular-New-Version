@@ -1,0 +1,31 @@
+<div class="testimonial-area">
+    <dx-gallery
+        [dataSource]="listItem"
+        width="100%"
+        [loop]="true"
+        [height]="440"
+        [wrapAround]="false"
+        [slideshowDelay]="1000"
+        [showIndicator]="false">
+        <div class="list-feature-flower">
+            <div *dxTemplate="let item of 'item'">
+                <div class="testimonial-slider">
+                    <div class="testimonial-inner text-center">
+                        <div class="test-cont">
+                            <i class="fas fa-quote-right"></i>
+                            <p class="text-content">{{item.text}}</p>
+                        </div>
+                        <div class="test-author">
+                            <h5>{{item.name}}</h5>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-slack"></i>&nbsp;
+                            <i class="fab fa-slack"></i>&nbsp;
+                            <i class="fab fa-slack"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dx-gallery>
+</div>

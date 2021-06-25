@@ -1,0 +1,36 @@
+<div class="tab-content">
+    <div class="tab-title">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" (click)="OnToggleTab(true,false, false)">Description</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="OnToggleTab(false,true, false)">Data Sheet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="OnToggleTab(false,false, true)">Reviews</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <dx-load-panel *ngIf="loadingVisible" [visible]="loadingVisible" [showPane]="false" (onShown)="onShown()">
+        </dx-load-panel>
+        <div *ngIf="tabDescription" class="tab-description">
+            <h3><b>Detail</b></h3>
+            <p>{{detailFlower.description}}</p>
+            <h3> <b>Feature</b></h3>
+            <ul *ngFor="let item of dataFeature" class="list-feature">
+                <li class="item-feature"><i class="fas fa-play"></i> {{item}}</li>
+            </ul>
+        </div>
+        <div *ngIf="tabDataSheet" class="tab-data-sheet">
+            <h3><b>Data Sheet</b></h3>
+            <ul *ngFor="let item of dataSheet" class="list-data-sheet">
+                <li class="item-data-sheet"><i class="fas fa-play"></i> {{item}}</li>
+            </ul>
+        </div>
+        <div *ngIf="tabReview" class="col-lg-6">
+            <app-comment-reply></app-comment-reply>
+        </div>
+    </div>
+</div>

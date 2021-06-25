@@ -1,0 +1,20 @@
+.comment-form-area .col-lg-12{
+    margin: 20px 0;
+}
+.flower_review{
+    display: flex;
+    margin: 30px 0;
+}
+.review_details{
+    margin: 0 0 0 10px;
+}
+.review_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .rating_send{
+        float: right;
+    }
+}
+.user_review{
+    margin: 30px 0;
+}

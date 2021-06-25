@@ -1,0 +1,72 @@
+::ng-deep .footer-top {
+    .title-widget{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    p{
+        margin-bottom: 1rem;
+        font-size: 14px;
+    }
+    .newsletter-footer {
+        .input-email {
+            padding: 12px 0 12px 7px;
+            border-radius: 6px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            width: 90%;
+            outline: none;
+
+            &:focus {
+                border-bottom: 2px solid hotpink;
+            }
+        }
+
+        .subscribe-btn {
+            margin-top: 12px;
+            padding: 6px 20px;
+            background-color: #ff5151;
+            color: white;
+            border-radius: 2px;
+            border: none;
+            outline: none;
+
+            &:hover {
+                transition: 0.8s all;
+                color: white;
+                background-color: orangered;
+                cursor: pointer;
+            }
+        }
+    }
+    .footer-list, .footer-contact, .footer-blog {
+        padding-left: 0;
+
+        & li {
+            list-style-type: none;
+            margin: 0 0 5px;
+            font-size: 14px;
+            & a{
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+    .footer-contact label{
+        font-weight: bold;
+        margin-bottom: 2px;
+        display: block;
+        font-size: 14px;
+    }
+    .footer-blog{
+        .widget-blog-wrap{
+            display: flex;
+            .widget-blog-content{
+                padding-left: 10px;
+            }
+        }
+    }
+}

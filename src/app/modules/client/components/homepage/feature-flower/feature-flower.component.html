@@ -1,0 +1,42 @@
+<div class="feature-flower">
+    <div class="section-title text-center">
+        <h2 class="feature-flower-title"><span>Feature</span> Flower</h2>
+        <p class="feature-flower-description">There are many variations of passages of Lorem Ipsum available, but
+            the majority have
+            suffered lobbied alteration in some Redid form</p>
+    </div>
+    <dx-gallery
+        [dataSource]="allFlowers"
+        [height]="300"
+        [width]="600"
+        [initialItemWidth]="850"
+        [loop]="true"
+        [wrapAround]="true"
+        [showIndicator]="false">
+        <div class="list-feature-flower">
+            <div *dxTemplate="let flower of 'item'">
+                <div class="feature-flower-grid">
+                    <div class="flower-image">
+                        <a href="#">
+                            <img class="image-item" src="{{flower.image}}" alt="image">
+                        </a>
+                        <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="far fa-eye"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a>
+                            </li>
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                        <span class="flower-new-label">Sale</span>
+                        <span class="flower-discount-label">20%</span>
+                    </div>
+                    <div class="flower-content">
+                        <h3 class="title"><a href="#">{{flower.name}}</a></h3>
+                        <div class="price">{{flower.newPrice| currency: 'VND':true:'1.0'}}
+                            <span>{{flower.oldPrice| currency: 'VND':true:'1.0'}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dx-gallery>
+</div>

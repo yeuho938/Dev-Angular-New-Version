@@ -1,0 +1,36 @@
+@import "mixins";
+::ng-deep .box-banner {
+    margin: 30px 0;
+}
+::ng-deep .section-title{
+    h2{
+        font-size: 35px;
+        font-weight: bold;
+        span{
+            color: red;
+        }
+    }
+    p{
+        @include fontStyle;
+        font-weight: 500;
+        width: 50%;
+        margin: 20px auto;
+    }
+}
+::ng-deep .item-image {
+    border-radius: 8px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+/// Feature flower area
+.feature-flower-area{
+    margin: 40px auto;
+}
+/// All flower area
+.all-flower-area{
+    margin: 30px 0;
+}
+/// Blog
+.blog-area{
+    margin: 30px 0 50px 0;
+}

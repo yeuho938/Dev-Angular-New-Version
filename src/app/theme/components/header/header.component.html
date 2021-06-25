@@ -1,0 +1,88 @@
+<div class="header-top-area">
+    <div class="social-top">
+        <ul class="list-social-icon">
+            <li class="list-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-item"><a href="#"><i class="fab fa-tumblr"></i></a></li>
+            <li class="list-item"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        </ul>
+    </div>
+    <div class="top-info-wrap text-right">
+        <ul class="top-info">
+            <li class="list-item">Mon - Fri : 9am to 5pm</li>
+            <li class="list-item"><a href="#">+88012345678</a></li>
+            <li class="list-item"><a href="#">fultalashop@gmail.com</a></li>
+        </ul>
+    </div>
+</div>
+<dx-toolbar class="header-toolbar">
+    <dxi-item
+        *ngIf="menuToggleEnabled"
+        location="before"
+        widget="dxButton"
+        cssClass="menu-button"
+        [options]="{icon: 'menu', stylingMode: 'text', onClick: toggleMenu}">
+    </dxi-item>
+    <dxi-item
+        location="before"
+        cssClass="header-logo">
+        <div *dxTemplate="let data of 'item'">
+            <a routerLink="/">
+                <img src="../../assets/images/logo.png" alt="logo">
+            </a>
+        </div>
+    </dxi-item>
+    <dxi-item *ngIf="showHeaderMenu"
+              location="before"
+              locateInMenu="auto">
+        <div *dxTemplate="let data of 'item'">
+            <dx-menu
+                [elementAttr]="{ id: 'elementId', class: 'class-name' }"
+                class="header-menu"
+                [dataSource]="menuItems"
+                displayExpr="text"
+                [showFirstSubmenuMode]="{name: 'onHover',delay: { show: 0, hide: 500 }}"
+                orientation="horizontal"
+                submenuDirection="auto"
+                [hideSubmenuOnMouseLeave]="true"
+                (onSubmenuShowing)="onSubmenuShowing($event)">
+                <div *dxTemplate="let menu of 'item'">
+                    <a [routerLink]="[menu.link]"
+                       [ngClass]="(menu.items !== undefined && menu.items.length) ? 'has-child' : ''"
+                       routerLinkActive="active" class="menu-item">
+                        <i *ngIf="menu.icon" [ngClass]="menu.icon ? menu.icon : ''"></i> {{menu.text}}
+                    </a>
+                </div>
+            </dx-menu>
+        </div>
+    </dxi-item>
+    <dxi-item
+        location="after"
+        locateInMenu="auto">
+        <div *dxTemplate="let data of 'item'">
+            <dx-button
+                class="user-button"
+                height="100%"
+                stylingMode="text">
+                <div *dxTemplate="let data of 'content'">
+                    <app-user-panel></app-user-panel>
+                </div>
+            </dx-button>
+        </div>
+    </dxi-item>
+    <dxi-item
+        location="before">
+        <div class="list-item-right" *dxTemplate="let data of 'item'">
+            <div class="search-box">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Search...">
+            </div>
+            <div class="wishlist-icons">
+                <i class="far fa-heart"></i>
+            </div>
+            <div class="cart-icons">
+                <i class="fas fa-shopping-cart" routerLink="/client/cart"></i>
+            </div>
+        </div>
+    </dxi-item>
+</dx-toolbar>

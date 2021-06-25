@@ -1,0 +1,110 @@
+.flower-details-images img {
+    width: 100%;
+    height: auto;
+}
+
+.flower_details_info {
+    .name_flower {
+        font-weight: bold;
+    }
+
+    .flower_description {
+        font-size: 15px;
+    }
+}
+
+.li-item {
+    font-size: 15px;
+    list-style-type: none;
+    color: black;
+    padding: 0 10px 0 0;
+}
+
+.flower_price {
+    padding: 0!important;
+
+    .li-item {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 10px 0 0;
+
+        &.price-new {
+            color: red !important;
+        }
+    }
+}
+.flower-quantity-action{
+    display: flex;
+    .title-quantity{
+        font-size: 15px;
+        padding-right: 10px;
+        padding-top: 8px;
+    }
+}
+.flower-social_share {
+    display: flex;
+
+    .title_share {
+        font-weight: 500;
+    }
+
+    .flower_social_link {
+        display: flex;
+        padding: 5px 5px;
+        color: black;
+    }
+}
+
+.flower_btn {
+    display: flex;
+    margin: 10px 0;
+    padding: 0;
+
+    .buy_now_btn, .fas.fa-heart {
+        border: 1px solid #ddd;
+        color: black;
+        outline: none;
+        background: white;
+
+        &:hover {
+            border: none;
+            transition: 0.6s all;
+            background: #ff5151;
+            color: white;
+        }
+    }
+
+    .buy_now_btn {
+        font-weight: 500;
+        padding: 6px 0px;
+        font-size: 14px;
+    }
+
+    .fas.fa-heart {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+}
+
+.flower_price {
+    display: flex;
+    padding: 0 10px;
+}
+
+.flower_color {
+    .title_color {
+        font-weight: 500;
+    }
+
+    .flower_choose_color {
+        display: flex;
+    }
+}
+#tab-content{
+    margin: 40px 0;
+    width: 100%;
+}
+app-tab-content {
+    width: 100%;
+}

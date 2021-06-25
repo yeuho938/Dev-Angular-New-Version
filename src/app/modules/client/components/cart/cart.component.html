@@ -1,0 +1,78 @@
+<div class="main-content-wrap cart-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-area">
+                    <app-breadcrumb [titleBreadcrumb]="titleBreadcrumb"
+                                    [breadcrumbItem]="breadcrumbItem"></app-breadcrumb>
+                </div>
+            </div>
+            <div class="col-12">
+                <form action="#" class="cart-table">
+                    <div class="cart-table">
+                        <dx-data-grid id="gridCartContainer" [dataSource]="cartData" [showBorders]="true">
+                            <dxi-column dataField="image" [width]="200" [allowFiltering]="false" [allowSorting]="false"
+                                        cellTemplate="cellTemplate">
+                                <div *dxTemplate="let image of 'cellTemplate'">
+                                    <img [src]="image.value" width="150" height="130"/>
+                                </div>
+                            </dxi-column>
+                            <dxi-column dataField="name" [width]="150" caption="Product"></dxi-column>
+                            <dxi-column dataField="newPrice" [width]="150" caption="Unit Price"></dxi-column>
+                            <dxi-column [caption]="'Quantity'" [width]="150" dataField="quantity"
+                                        cellTemplate="cellQuantity">
+                                <div *dxTemplate="let cell of 'cellQuantity'" class="quantity-flower">
+                                    <dx-number-box
+                                        [value]="1"
+                                        [showSpinButtons]="true"
+                                        [width]="80"
+                                        [disabled]="false"
+                                    ></dx-number-box>
+                                </div>
+                            </dxi-column>
+                            <dxi-column dataField="newPrice*quantity" [width]="150" caption="Total"></dxi-column>
+                            <dxi-column [width]="150" cellTemplate="actionsCellTemplate" [caption]="'Remove'">
+                                <div *dxTemplate="let cell of 'actionsCellTemplate'">
+                                    <button class="btn-delete">
+                                        <i class="far fa-trash-alt delete-icon ml-2 cursor-pointer" id="icon-delete"
+                                           title="'Delete'">
+                                        </i>
+                                    </button>
+                                </div>
+                            </dxi-column>
+                        </dx-data-grid>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="coupon-all">
+
+                                <div class="coupon2">
+                                    <input class="submit btn" name="update_cart" value="Update cart" type="submit">
+                                    <a href="shop.html" class="btn continue-btn">Continue Shopping</a>
+                                </div>
+
+                                <div class="coupon">
+                                    <h3>Coupon</h3>
+                                    <p>Enter your coupon code if you have one.</p>
+                                    <input id="coupon_code" class="input-text" name="coupon_code" value=""
+                                           placeholder="Coupon code" type="text">
+                                    <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ml-auto">
+                            <div class="cart-page-total">
+                                <h2>Cart totals</h2>
+                                <ul>
+                                    <li>Subtotal <span>$170.00</span></li>
+                                    <li>Total <span>$170.00</span></li>
+                                </ul>
+                                <a href="#" class="proceed-checkout-btn">Proceed to checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="shop-sidebar-wrap">
+    <div class="filter-price-wrapper">
+        <h4 class="title">FILTER BY PRICE</h4>
+        <hr class="underlined">
+        <div class="filter-price-cont">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <dx-slider #slider
+                               [min]="0"
+                               [max]="500000"
+                               [value]="100000"
+                               [keyStep]="500"
+                    ></dx-slider>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Price</div>
+                    <div class="dx-field-value">
+                        <dx-number-box
+                            [min]="0"
+                            [max]="500000"
+                            [showSpinButtons]="true"
+                            [(value)]="slider.value"
+                            [width]="100"
+                            [step]="500"
+                        ></dx-number-box>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-fitter" href="#">
+            FILTER
+        </button>
+    </div>
+    <div class="categories-wrapper">
+        <h4 class="title">CATEGORIES</h4>
+        <hr class="underlined">
+        <ul class="list-item categories" *ngFor="let item of listCate">
+            <li class="item cate"><a href="#">{{item.name}} <span>({{item.number}})</span></a></li>
+        </ul>
+    </div>
+    <div class="best-flower-wrapper">
+        <h4 class="title">BEST FLOWER</h4>
+        <hr class="underlined">
+        <dx-list
+            [dataSource]="bestFlower"
+            [searchEnabled]="false">
+            <div *dxTemplate="let item of 'item'" class="list-best-flower">
+                <div class="flower-image">
+                    <img src="{{item.image}}" alt="image"/>
+                </div>
+                <div class="content">
+                    <h5>{{item.name}}</h5>
+                    <a class="price">
+                        {{item.newPrice| currency: 'VND':true:'1.0'}}
+                        <span><s>{{item.oldPrice| currency: 'VND':true:'1.0'}}</s></span>
+                    </a>
+                </div>
+            </div>
+        </dx-list>
+    </div>
+    <div class="color-wrapper">
+        <h4 class="title">COLOR</h4>
+        <hr class="underlined">
+        <ul class="list-item color" *ngFor="let item of listColors">
+            <li class="item color"><a href="#">{{item.name}} <span>({{item.number}})</span></a></li>
+        </ul>
+    </div>
+    <div class="size-wrapper">
+        <h4 class="title">SIZE</h4>
+        <hr class="underlined">
+        <ul class="list-item size" *ngFor="let item of listSize">
+            <li class="item size"><a href="#">{{item.name}} <span>({{item.number}})</span></a></li>
+        </ul>
+    </div>
+    <div class="hot-tags-wrapper">
+        <h4 class="title">HOT TAGS</h4>
+        <hr class="underlined">
+        <ul class="list-item hot-tag">
+            <div *ngFor="let item of listHotTags">
+                <li class="item hot-tag"><a href="#">{{item}}</a></li>
+            </div>
+        </ul>
+    </div>
+</div>

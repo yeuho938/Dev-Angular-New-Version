@@ -1,0 +1,33 @@
+@import "mixins";
+
+.list-flowers-page {
+    width:100%;
+    .sidebar-flowers{
+        width: 80%;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .list-flowers-page {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .list-flowers-page {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+}
+.list-flower {
+    margin: 30px auto;
+    width: 70%;
+
+}
+.left-sidebar{
+    width: 95%;
+}

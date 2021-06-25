@@ -1,0 +1,36 @@
+@import "mixins";
+::ng-deep .blog{
+    margin-bottom: 50px;
+    .meta-tag{
+        position: absolute;
+        background: red;
+        padding: 10px;
+        p{
+            color: white;
+            font-size: 1.2rem;
+        }
+    }
+    .blog-content{
+        .title-content{
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .link-read-more{
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+        }
+        .text-content{
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+    .single-blog{
+        opacity: 0.9;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

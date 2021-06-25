@@ -1,0 +1,28 @@
+@import "mixins";
+
+.testimonial-area {
+    background-image: url("../../../../../../assets/images/testimonial-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testimonial-inner {
+    margin: 15% 0;
+}
+
+.test-cont {
+    @include fontStyle;
+    font-weight: 500;
+    font-size: 16px;
+    height: 70px;
+    margin: 0 auto;
+
+    p.text-content {
+        word-wrap: break-word;
+    }
+}
+
+.fas.fa-quote-right {
+    font-size: 3rem;
+    color: #ddd;
+}

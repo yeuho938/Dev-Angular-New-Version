@@ -1,0 +1,74 @@
+<div class="detail-flower-page">
+    <div class="breadcrumb-area">
+        <app-breadcrumb [titleBreadcrumb]="titleBreadcrumb" [breadcrumbItem]="breadcrumbItem"></app-breadcrumb>
+    </div>
+    <div class="main-content-wrap flower-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="flower-details-images">
+                        <img src="{{detailFlower.image}}" alt="#">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="flower_details_info">
+                        <h2 class="name_flower">{{detailFlower.name}}</h2>
+                        <div class="flower_description">
+                            <p>{{detailFlower.description}} </p>
+                        </div>
+                        <ul class="flower_price">
+                            <li class="li-item price-old"><s>{{detailFlower.oldPrice| currency: 'VND':true:'1.0'}}</s></li>
+                            <li class="li-item price-new"> {{detailFlower.newPrice| currency: 'VND':true:'1.0'}}</li>
+                        </ul>
+                        <div class="flower_color">
+                            <h3 class="title_color">Choose Colour</h3>
+                            <ul class="flower_choose_color">
+                                <li class="li-item red"><a href="#"><i class="ion-record"></i></a></li>
+                                <li class="li-item blue"><a href="#"><i class="ion-record"></i></a></li>
+                                <li class="li-item perl"><a href="#"><i class="ion-record"></i></a></li>
+                                <li class="li-item yellow"><a href="#"><i class="ion-record"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="flower-quantity-action">
+                            <h4 class="title-quantity">Quantity :</h4>
+                            <div class="flower-quantity">
+                                <dx-number-box
+                                    [value]="1"
+                                    [showSpinButtons]="true"
+                                    [width]="70"
+                                    [disabled]="false"
+                                ></dx-number-box>
+                            </div>
+                        </div>
+                        <ul class="flower_btn">
+                            <li class="li-item">
+                                <a>
+                                <dx-button
+                                    class="buy_now_btn"
+                                    stylingMode="contained"
+                                    text="BUY NOW"
+                                    type="success"
+                                    [width]="120"
+                                    (onClick)="click($event)">
+                                </dx-button>
+                               </a></li>
+                            <li class="li-item"><a href="#" (click)="onclickHeart($event)"><i class="fas fa-heart"></i></a></li>
+                        </ul>
+                        <div class="flower-social_share">
+                            <h3 class="title_share">Share :</h3>
+                            <ul class="flower_social_link">
+                                <div *ngFor="let itemIcon of socialIcon">
+                                    <li class="li-item"><a href="#"><i class="{{itemIcon}}"></i></a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="tab-content">
+                <app-tab-content></app-tab-content>
+            </div>
+        </div>
+    </div>
+</div>
+
