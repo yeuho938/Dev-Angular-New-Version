@@ -2,44 +2,21 @@ import {StatusBooking} from '@app/modules/admin/shared/enums';
 
 export const ADMIN_MENU = [
     {
-        text: 'Dashboard',
-        link: '/admin/dashboard',
-        icon: 'fas fa-home'
+        text: 'DASHBOARD',
+        path: '/admin/dashboard'
     },
     {
-        text: 'Bookings',
-        link: '/admin/bookings',
-        icon: 'fas fa-address-book'
+        text: 'FLOWERS',
+        path: '/admin/flowers',
     },
     {
-        text: 'User List',
-        link: '/admin/users',
-        icon: 'fas fa-users'
+        text: 'ORDERS',
+        path: '/admin/orders'
     },
     {
-        text: 'Boats',
-        icon: 'fas fa-ship',
-        link: '/admin/boats',
-        // items: [
-        //     {
-        //         text: 'Partner List',
-        //         link: '/admin/boats/partners'
-        //     },
-        //     {
-        //         text: 'Boat List',
-        //         link: '/admin/boats/list'
-        //     },
-        //     {
-        //         text: 'Schedule',
-        //         link: '/admin/boats/schedule'
-        //     }
-        // ]
+        text: 'USERS',
+        path: '/admin/users',
     },
-    {
-        text: 'Revenue',
-        link: '/admin/revenue',
-        icon: 'fas fa-funnel-dollar'
-    }
 ];
 
 export const STATUS_METHOD: { value: StatusBooking, name: string }[] = [

@@ -3,6 +3,7 @@ import {FlowerService} from '@app/modules/shared/services';
 import {Flower} from '@app/modules/shared/models';
 import {SOCIAL_ICON} from '@app/modules/client/shared/social-icon';
 import notify from "devextreme/ui/notify";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
     selector: 'app-flower-detail',
@@ -15,7 +16,7 @@ export class FlowerDetailComponent implements OnInit {
     socialIcon = SOCIAL_ICON;
     detailFlower: Flower;
 
-    constructor(public flowerService: FlowerService) {
+    constructor(public flowerService: FlowerService, public activatedRoute: ActivatedRoute) {
     }
 
     ngOnInit(): void {
@@ -23,7 +24,8 @@ export class FlowerDetailComponent implements OnInit {
     }
 
     getFlowerById() {
-        this.flowerService.getFlowerById(1).subscribe((flower) => {
+        const id = (+this.activatedRoute.snapshot.params.id);
+        this.flowerService.getFlowerById(id).subscribe((flower) => {
             this.detailFlower = flower;
         });
     }

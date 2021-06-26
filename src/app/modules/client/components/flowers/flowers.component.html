@@ -3,11 +3,11 @@
         <div *ngFor="let flower of allFlowers" [ngClass]="colMd3">
             <div class="flower-grid">
                 <div class="flower-image">
-                    <a href="#">
+                    <a [routerLink]="['/client/flowers', flower.id]">
                         <img class="image-item" src="{{flower.image}}" alt="image">
                     </a>
                     <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="far fa-eye"></i></a></li>
+                        <li><a href="" [routerLink]="['/client/flowers', flower.id]" data-tip="Quick View"><i class="far fa-eye"></i></a></li>
                         <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a>
                         </li>
                         <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>

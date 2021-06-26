@@ -1,0 +1,13 @@
+::ng-deep #gridContainer {
+  height: 100%;
+}
+
+::ng-deep img {
+  height: 100px;
+}
+::ng-deep .action-inline .far{
+  color: green;
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+

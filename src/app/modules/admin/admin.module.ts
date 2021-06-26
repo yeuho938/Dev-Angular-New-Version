@@ -3,12 +3,19 @@ import {RouterModule} from '@angular/router';
 
 import {ThemeModule, RouterOutletComponent} from '@app/theme';
 import {SharedModule} from '@app/shared/shared.module';
-import {AdminComponent} from './components/admin/admin.component';
-import {UsersComponent} from './components/users/users.component';
-import {DashboardComponent} from './components/dashboard/dashboard.component';
 
-const PROVIDERS = [
+import {
+    AdminComponent, ChartComponent, DashboardComponent,
+    EditFlowersComponent, FlowersComponent, OrdersAdminComponent,
+    UsersComponent
+} from '@app/modules/admin/components';
 
+const PROVIDERS = [];
+const COMPONENTS = [
+    AdminComponent, ChartComponent,
+    DashboardComponent, EditFlowersComponent,
+    FlowersComponent, OrdersAdminComponent,
+    UsersComponent
 ];
 
 @NgModule({
@@ -25,6 +32,14 @@ const PROVIDERS = [
                     {
                         path: 'dashboard',
                         component: DashboardComponent
+                    },
+                    {
+                        path: 'flowers',
+                        component: FlowersComponent
+                    },
+                    {
+                        path: 'orders',
+                        component: OrdersAdminComponent
                     },
                     {
                         path: 'users',
@@ -55,9 +70,7 @@ const PROVIDERS = [
         ]),
     ],
     declarations: [
-        DashboardComponent,
-        AdminComponent,
-        UsersComponent
+        ...COMPONENTS
     ],
     providers: [
         ...PROVIDERS

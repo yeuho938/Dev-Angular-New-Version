@@ -5,10 +5,11 @@ import {RouterModule} from '@angular/router';
 import {HeaderComponent} from './shared/components/header/header.component';
 
 import {
-    CartComponent, CheckoutComponent, ContentComponent, FlowerDetailComponent,
+    CartComponent, CheckoutComponent, FlowerDetailComponent,
     FlowersComponent, HomepageComponent, ListFlowersComponent, OrdersClientComponent,
     ClientComponent, BannerComponent, LatestBlogComponent, FeatureFlowerComponent,
-    LeftSidebarComponent, CommentReplyComponent, TabContentComponent
+    LeftSidebarComponent, CommentReplyComponent, TabContentComponent,
+    InfoOrderComponent, DetailBillComponent, TestimonialComponent
 } from './components';
 import {
     DxMenuModule, DxSelectBoxModule,
@@ -21,19 +22,18 @@ import {
 } from 'devextreme-angular';
 
 import {ThemeModule} from '@app/theme';
-import {TestimonialComponent} from './components/homepage/testimonial/testimonial.component';
-import { DetailBillComponent } from './components/checkout/detail-bill/detail-bill.component';
-import { InfoOrderComponent } from './components/checkout/info-order/info-order.component';
+
 
 const COMPONENTS = [
     CartComponent, LeftSidebarComponent,
     FlowersComponent, CommentReplyComponent,
     CheckoutComponent, TabContentComponent,
     ListFlowersComponent, FlowerDetailComponent,
-    HomepageComponent, ContentComponent,
+    HomepageComponent, TestimonialComponent,
     OrdersClientComponent, HeaderComponent,
     ClientComponent, BannerComponent,
-    LatestBlogComponent, FeatureFlowerComponent
+    LatestBlogComponent, FeatureFlowerComponent,
+    InfoOrderComponent, DetailBillComponent
 ];
 const DEVEXTREME_MODULES = [
     DxMenuModule, DxSelectBoxModule,
@@ -48,10 +48,7 @@ const DEVEXTREME_MODULES = [
 
 @NgModule({
     declarations: [
-        ...COMPONENTS,
-        TestimonialComponent,
-        DetailBillComponent,
-        InfoOrderComponent,
+        ...COMPONENTS
     ],
     exports: [
         HeaderComponent,
