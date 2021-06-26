@@ -1,0 +1,90 @@
+/// Login Coupon Area
+
+.text-return-customer, .text-have-coupon {
+    background-color: #f6f6f6;
+    padding: 20px 0;
+    border-top: 3px solid #ff5151;
+}
+
+.link-login, .link-enter-code {
+    font-size: 16px;
+    color: red;
+    font-weight: 500;
+}
+
+/// Form login
+.form-login {
+    border: 1px solid #ddd;
+    padding: 20px;
+
+    p, label {
+        font-size: 16px;
+    }
+
+    .login-remember {
+        padding-top: 10px;
+
+        .btn-login {
+            padding: 5px 15px;
+            border: 1px solid black;
+            font-weight: 500;
+
+            &:hover {
+                transition: 0.4s all;
+                background-color: black;
+                color: #ff5151;
+            }
+        }
+
+        .remember {
+            margin-left: 16px;
+        }
+    }
+
+    .lost-password {
+        padding: 10px 0;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+/// Coupon
+.coupon-area {
+    margin: 30px 0;
+
+    .coupon-content {
+        margin-top: 30px;
+        border: 1px solid #ddd;
+        padding: 20px;
+
+        .checkout-coupon {
+            display: flex;
+
+            .button-apply-coupon {
+                margin-top: -3px;
+                margin-left: 10px;
+                padding: 5px 7px;
+                font-weight: 500;
+
+                &:hover {
+                    transition: 0.4s all;
+                    background-color: black;
+                    color: #ff5151;
+                }
+            }
+        }
+    }
+}
+
+///
+.checkout-details-wrapper{
+    margin-bottom: 50px;
+}

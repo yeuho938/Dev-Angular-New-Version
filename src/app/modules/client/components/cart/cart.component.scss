@@ -1,11 +1,147 @@
-.cart-page{
-    width: 100%;
+@mixin styleBtn {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
 }
-.cart-table{
+
+@mixin hoverBtnLink {
+    transition: 0.5s all;
+    background-color: #ff5151;
+}
+
+.cart-page {
+    width: 100%;
+
+    .row {
+        width: 100%;
+    }
+}
+
+/// Table cart
+.cart-table {
     width: 100%;
     margin: 0 auto;
+
+    .dx-data-grid {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
-.dx-data-grid{
-    width: 100%;
-    margin: 0 auto;
+
+::ng-deep .dx-datagrid-nowrap, .dx-datagrid-nowrap .dx-header-row > td > .dx-datagrid-text-content {
+    font-size: 16px;
+}
+
+::ng-deep .dx-datagrid-text-content {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+::ng-deep .dx-datagrid-rowsview .dx-row {
+    border: 1px solid #ddd;
+}
+
+::ng-deep .dxi-column {
+    text-align: center;
+    justify-content: center;
+}
+
+#icon-delete:hover {
+    color: red;
+}
+
+/// Bottom cart
+.row.bottom-cart {
+    margin: 50px 0;
+
+    .col-md-8 {
+        padding: 0 !important;
+    }
+
+    .col-md-4 {
+        padding: 0 !important;
+    }
+}
+
+.updateCart-continueShopping {
+    .link-continue-shopping, .btn-submit {
+        @include styleBtn;
+
+        &:hover {
+            @include hoverBtnLink;
+        }
+    }
+
+    .link-continue-shopping {
+        padding: 8px 10px 14px 10px;
+        margin-left: 10px;
+    }
+}
+
+.coupon-area {
+    margin: 20px 0;
+
+    .title-coupon {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .description-coupon {
+        font-size: 16px;
+    }
+
+    .coupon {
+        display: flex;
+
+        .btn-apply_coupon {
+            @include styleBtn;
+            font-size: 15px;
+            margin-left: 10px;
+
+            &:hover {
+                @include hoverBtnLink;
+            }
+        }
+    }
+}
+
+
+::ng-deep .cart-page-total {
+    .title-cart-total {
+        font-weight: 700;
+        padding: 0 !important;
+    }
+
+    .all-total-price {
+        border: 1px solid #ddd;
+        padding: 0;
+
+        .item-total, .item-subtotal {
+            list-style-type: none;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 16px;
+
+            & span {
+                float: right;
+            }
+        }
+
+        .item-subtotal {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
+    .link-proceed-checkout {
+        @include styleBtn;
+        font-size: 15px;
+        padding: 8px 10px;
+
+        &:hover {
+            @include hoverBtnLink;
+        }
+    }
 }

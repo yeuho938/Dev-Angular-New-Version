@@ -23,7 +23,7 @@ export const USER_MENU = [
   },
   {
     text: 'BLOG',
-    link: '/client/cart'
+    link: '/client/checkout'
   },
   {
     text: 'ABOUT US',

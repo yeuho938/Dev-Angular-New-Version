@@ -22,6 +22,8 @@ import {
 
 import {ThemeModule} from '@app/theme';
 import {TestimonialComponent} from './components/homepage/testimonial/testimonial.component';
+import { DetailBillComponent } from './components/checkout/detail-bill/detail-bill.component';
+import { InfoOrderComponent } from './components/checkout/info-order/info-order.component';
 
 const COMPONENTS = [
     CartComponent, LeftSidebarComponent,
@@ -48,6 +50,8 @@ const DEVEXTREME_MODULES = [
     declarations: [
         ...COMPONENTS,
         TestimonialComponent,
+        DetailBillComponent,
+        InfoOrderComponent,
     ],
     exports: [
         HeaderComponent,

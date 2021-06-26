@@ -1,23 +1,28 @@
 import {Component, OnInit} from '@angular/core';
 import {Cart} from '../../models/cart.class';
-import {FlowerService} from '@app/modules/shared/services';
-import {Flower} from '@app/modules/shared/models';
+import notify from 'devextreme/ui/notify';
+import {CartService} from '@app/modules/client/services/cart.service';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+    selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
     titleBreadcrumb = 'Cart';
     breadcrumbItem = 'Cart';
-    cartData: Flower[];
-    constructor( public flowerService: FlowerService) {
-  }
+    cartData: Cart[];
 
-  ngOnInit(): void {
-      this.flowerService.getFeatureFlower().subscribe((flower) => {
-          this.cartData = flower;
-      });
-  }
+    constructor(public cartService: CartService) {
+    }
+
+    ngOnInit(): void {
+        this.cartService.getCartData().subscribe((item) => {
+            this.cartData = item;
+        });
+    }
+
+    click(massage: string) {
+        notify(massage + 'successfully');
+    }
 }

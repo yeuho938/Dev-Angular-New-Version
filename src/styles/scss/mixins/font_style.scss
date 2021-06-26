@@ -7,3 +7,7 @@
     font-family: "Poppins", sans-serif;
     color: #222;
 }
+@mixin styleLink{
+    color: black;
+    text-decoration: none;
+}

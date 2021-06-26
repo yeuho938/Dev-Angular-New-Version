@@ -1,0 +1,210 @@
+<div class="billing-details-wrap">
+    <form action="#">
+        <h3 class="shopping-checkbox-title">Billing Details</h3>
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="single-form-row">
+                    <label>Full name <span class="required">*</span></label>
+                    <dx-text-box [showClearButton]="true" placeholder="Full Name *">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="single-form-row">
+                    <label>Username or email <span class="required">*</span></label>
+                    <dx-text-box [showClearButton]="true" placeholder="Name *">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-12">
+                <p class="single-form-row">
+                    <label>Company name</label>
+                    <dx-text-box [showClearButton]="true" placeholder="Company *">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-12">
+                <div class="single-form-row">
+                    <label>Country <span class="required">*</span></label>
+                    <div class="dx-field">
+                        <div class="dx-field-value">
+                            <dx-select-box
+                                [items]="simpleProducts"
+                                [value]="simpleProducts[0]"
+                                [disabled]="false"
+                            ></dx-select-box>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <p class="single-form-row">
+                    <label>Street address <span class="required">*</span></label>
+                    <dx-text-box [showClearButton]="true"
+                                 placeholder="House number and street name *">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-12">
+                <p class="single-form-row">
+                    <dx-text-box [showClearButton]="true"
+                                 placeholder="Apartment, suite, unit etc. (optional)">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="single-form-row">
+                    <label>Town / City <span class="required">*</span></label>
+                    <dx-text-box [showClearButton]="true" placeholder=" Town/ City">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="single-form-row">
+                    <label>State / County</label>
+                    <dx-text-box [showClearButton]="true" placeholder=" State / County">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="single-form-row">
+                    <label>Postcode / ZIP <span class="required">*</span></label>
+                    <dx-text-box [showClearButton]="true" placeholder="Postcode / ZIP ">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="single-form-row">
+                    <label>Phone</label>
+                    <dx-text-box [showClearButton]="true" placeholder="Phone ">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-12">
+                <p class="single-form-row">
+                    <label>Email address <span class="required">*</span></label>
+                    <dx-text-box [showClearButton]="true" placeholder="Email address ">
+                    </dx-text-box>
+                </p>
+            </div>
+            <div class="col-lg-12">
+                <div class="checkout-box-wrap">
+                    <label>
+                        <dx-check-box [(value)]="checkBoxCreateAccount"></dx-check-box>
+                        Create an account?
+                    </label>
+                    <div class="account-create single-form-row" *ngIf="checkBoxCreateAccount">
+                        <dx-load-panel *ngIf="checkBoxCreateAccount" [visible]="loadingVisible" [showPane]="false"
+                                       (onShown)="onShown()">
+                        </dx-load-panel>
+                        <p>Create an account by entering the information below. If you are a
+                            returning customer please login at the top of the page.</p>
+                        <label class="creat-pass">Create account password <span>*</span></label>
+                        <dx-text-box [showClearButton]="true" placeholder=" New password ">
+                        </dx-text-box>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="checkout-box-wrap">
+                    <dx-load-panel *ngIf="checkBoxShipAddress" [visible]="loadingVisible" [showPane]="false"
+                                   (onShown)="onShown()">
+                    </dx-load-panel>
+                    <label id="checkout-box-2">
+                        <dx-check-box [(value)]="checkBoxShipAddress"></dx-check-box>
+                        Ship to a different address?
+                    </label>
+                    <div class="ship-box-info" *ngIf="checkBoxShipAddress">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p class="single-form-row">
+                                    <label>First name <span class="required">*</span></label>
+                                    <dx-text-box [showClearButton]="true" placeholder="First name  ">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="single-form-row">
+                                    <label>Username or email <span class="required">*</span></label>
+                                    <dx-text-box [showClearButton]="true" placeholder="Username or email ">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                            <div class="col-lg-12">
+                                <p class="single-form-row">
+                                    <label>Company name</label>
+                                    <dx-text-box [showClearButton]="true" placeholder="Company name ">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="single-form-row">
+                                    <label>Country <span class="required">*</span></label>
+                                    <div class="dx-field">
+                                        <div class="dx-field-value">
+                                            <dx-select-box
+                                                [items]="simpleProducts"
+                                                [value]="simpleProducts[0]"
+                                                [disabled]="false"
+                                            ></dx-select-box>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <p class="single-form-row">
+                                    <label>Street address <span class="required">*</span></label>
+                                    <dx-text-box [showClearButton]="true"
+                                                 placeholder="House number and street name *">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                            <div class="col-lg-12">
+                                <p class="single-form-row">
+                                    <dx-text-box [showClearButton]="true"
+                                                 placeholder="Apartment, suite, unit etc. (optional)">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="single-form-row">
+                                    <label>Town / City <span class="required">*</span></label>
+                                    <dx-text-box [showClearButton]="true"
+                                                 placeholder=" Town / City">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="single-form-row">
+                                    <label>State / County</label>
+                                    <dx-text-box [showClearButton]="true"
+                                                 placeholder=" State / County">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="single-form-row">
+                                    <label>Postcode / ZIP <span class="required">*</span></label>
+                                    <dx-text-box [showClearButton]="true"
+                                                 placeholder="Postcode / ZIP">
+                                    </dx-text-box>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <p class="single-form-row">
+                    <label>Order notes</label>
+                    <dx-text-area
+                        [height]="90"
+                        [maxLength]="200"
+                        placeholder="Notes about your order, e.g. special notes for delivery"
+                    >
+                    </dx-text-area>
+                </p>
+            </div>
+        </div>
+    </form>
+</div>
