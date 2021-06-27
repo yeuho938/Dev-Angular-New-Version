@@ -32,6 +32,7 @@ import {
 } from './components';
 import {AutoFocusInputDirective} from './directives';
 import {DxDrawerModule} from 'devextreme-angular/ui/drawer';
+import { CartBoxComponent } from './components/cart-box/cart-box.component';
 
 //
 const DEVEXTREME_MODULES = [
@@ -84,6 +85,7 @@ const PIPES = [];
         ...DIRECTIVES,
         ...PIPES,
         ...COMPONENTS,
+        CartBoxComponent,
     ],
     exports: [
         ...DEVEXTREME_MODULES,

@@ -1,0 +1,30 @@
+.main-content-wrap.wishlist-page{
+    width: 100%;
+    .list-wishlist-area{
+        width: 80%;
+        margin: 70px auto;
+    }
+}
+
+::ng-deep .dx-datagrid-nowrap, .dx-datagrid-nowrap .dx-header-row > td > .dx-datagrid-text-content {
+    font-size: 16px;
+}
+
+::ng-deep .dx-datagrid-text-content {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+::ng-deep .dx-datagrid-rowsview .dx-row {
+    border: 1px solid #ddd;
+}
+.btn-add-to-cart{
+    background-color: #ff5151;
+    border-radius: 0!important;
+    color: white;
+    &:hover{
+        transition: 0.4s all;
+       background-color: black;
+    }
+}

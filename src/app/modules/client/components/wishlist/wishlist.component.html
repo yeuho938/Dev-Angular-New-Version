@@ -1,0 +1,38 @@
+<div class="main-content-wrap wishlist-page">
+    <div class="breadcrumb-area">
+        <app-breadcrumb [titleBreadcrumb]="titleBreadcrumb"
+                        [breadcrumbItem]="breadcrumbItem"></app-breadcrumb>
+    </div>
+    <div class="list-wishlist-area">
+        <dx-data-grid id="gridCartContainer" [dataSource]="wishlists" [showBorders]="true">
+            <dxi-column alignment="center" dataField="image" [width]="210" [allowFiltering]="false" [allowSorting]="false"
+                        cellTemplate="cellTemplate">
+                <div *dxTemplate="let image of 'cellTemplate'">
+                    <img [src]="image.value" width="150" height="130"/>
+                </div>
+            </dxi-column>
+            <dxi-column alignment="center" dataField="name" [width]="210" caption="Product"></dxi-column>
+            <dxi-column alignment="center" dataField="price" [width]="210" caption="Unit Price"></dxi-column>
+            <dxi-column alignment="center" [width]="210" cellTemplate="addToCartCellTemplate" [caption]="'Remove'">
+                <div *dxTemplate="let cell of 'addToCartCellTemplate'">
+                    <dx-button
+                        class="btn-add-to-cart"
+                        stylingMode="contained"
+                        text="ADD TO CART"
+                        type="submit"
+                        [width]="150"
+                        [height]="38"
+                        (onClick)="click('Add to cart')">
+                    </dx-button>
+                </div>
+            </dxi-column>
+            <dxi-column alignment="center" [width]="210" cellTemplate="actionsCellTemplate" [caption]="'Remove'">
+                <div *dxTemplate="let cell of 'actionsCellTemplate'">
+                    <i class="far fa-trash-alt delete-icon ml-2 cursor-pointer" id="icon-delete"
+                       title="'Delete'">
+                    </i>
+                </div>
+            </dxi-column>
+        </dx-data-grid>
+    </div>
+</div>

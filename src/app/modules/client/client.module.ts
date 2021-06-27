@@ -5,7 +5,7 @@ import {RouterModule} from '@angular/router';
 import {HeaderComponent} from './shared/components/header/header.component';
 
 import {
-    CartComponent, CheckoutComponent, FlowerDetailComponent,
+    CartComponent, CheckoutComponent, FlowerDetailComponent, WishlistComponent,
     FlowersComponent, HomepageComponent, ListFlowersComponent, OrdersClientComponent,
     ClientComponent, BannerComponent, LatestBlogComponent, FeatureFlowerComponent,
     LeftSidebarComponent, CommentReplyComponent, TabContentComponent,
@@ -33,7 +33,7 @@ const COMPONENTS = [
     OrdersClientComponent, HeaderComponent,
     ClientComponent, BannerComponent,
     LatestBlogComponent, FeatureFlowerComponent,
-    InfoOrderComponent, DetailBillComponent
+    InfoOrderComponent, DetailBillComponent, WishlistComponent
 ];
 const DEVEXTREME_MODULES = [
     DxMenuModule, DxSelectBoxModule,
@@ -84,6 +84,10 @@ const DEVEXTREME_MODULES = [
                     {
                         path: 'checkout',
                         component: CheckoutComponent
+                    },
+                    {
+                        path: 'wishlist',
+                        component: WishlistComponent
                     },
                     {
                         path: 'order',

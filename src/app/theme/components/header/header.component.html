@@ -78,11 +78,14 @@
                 <input type="text" class="input-search" placeholder="Search...">
             </div>
             <div class="wishlist-icons">
-                <i class="far fa-heart"></i>
+                <i class="far fa-heart" routerLink="/client/wishlist"></i>
             </div>
-            <div class="cart-icons">
+            <div class="cart-icons"  (mouseover)='onHoverIconCart()' >
                 <i class="fas fa-shopping-cart" routerLink="/client/cart"></i>
             </div>
         </div>
     </dxi-item>
 </dx-toolbar>
+<div class="cart-box-area" *ngIf="isOpenCartBox">
+    <app-cart-box></app-cart-box>
+</div>

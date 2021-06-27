@@ -1,0 +1,38 @@
+<div class="cart-box">
+    <div class="list-flower-area">
+        <div class="flower-content" *ngFor="let flower of cartData">
+            <div class="img-flower">
+                <img src="{{flower.image}}" alt="image"/>
+            </div>
+            <div class="name-price-flower">
+                <h4>{{flower.name}}</h4>
+                <p>{{flower.quantity}} x</p>
+                <p class="price-flower">{{flower.price| currency: 'VND':true:'1.0'}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="total-price-area">
+        <h5> Sub-Total: <span>{{cartTotal| currency: 'VND':true:'1.0'}}</span></h5>
+    </div>
+    <div class="btn-cart-checkout">
+        <dx-button
+            class="btn-view-cart"
+            stylingMode="contained"
+            text="VIEW CART"
+            type="submit"
+            [width]="130"
+            [height]="43"
+            routerLink="/client/cart"
+        >
+        </dx-button>
+        <dx-button
+            class="btn-checkout"
+            stylingMode="contained"
+            text="CHECKOUT"
+            type="submit"
+            [width]="130"
+            [height]="43"
+            routerLink="/client/checkout">
+        </dx-button>
+    </div>
+</div>

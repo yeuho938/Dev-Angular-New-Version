@@ -19,3 +19,5 @@ export * from './flowers/flower-detail/tab-content/comment-reply/comment-reply.c
 export * from './checkout/checkout.component';
 export * from './checkout/info-order/info-order.component';
 export * from './checkout/detail-bill/detail-bill.component';
+
+export * from './wishlist/wishlist.component';

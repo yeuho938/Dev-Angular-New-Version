@@ -13,10 +13,14 @@ export class HeaderComponent {
     @Input() showHeaderMenu: boolean = false;
 
     @Output() menuToggle = new EventEmitter<boolean>();
-
+    isOpenCartBox = false;
     menuItems = USER_MENU;
 
     constructor() {
+    }
+
+    onHoverIconCart() {
+        this.isOpenCartBox = !this.isOpenCartBox;
     }
 
     onSubmenuShowing(e) {
