@@ -1,0 +1,50 @@
+.container.contact {
+    margin: 60px auto;
+    width: 80%;
+}
+.contact-form{
+    margin: 20px 30px 0 0;
+
+}
+.col-md-6.contact-inner {
+    margin: 10px 0;
+}
+
+.col-md-12.contact-inner {
+    margin: 10px 0;
+}
+
+.contact-submit-btn {
+    margin: 20px 0;
+
+    .btn-send-email {
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        &:hover {
+            transition: 0.4s all;
+            background-color: #ff5151;
+        }
+    }
+}
+.contact-info{
+    padding: 20px 30px;
+    background-color: #f2f2f2;
+    .contact-description {
+        margin: 20px 0;
+        p{
+            font-size: 15px;
+        }
+    }
+    .contact-address{
+        .list-item {
+            padding: 0;
+            .item {
+                font-size: 15px;
+                padding: 10px 0;
+                list-style-type: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+}

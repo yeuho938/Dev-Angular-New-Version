@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6" *ngFor="let blog of blogData">
+            <div class="single-blog">
+                <div class="blog-image">
+                    <div class="meta-tag">
+                        <p><span>{{blog.day}}</span> / {{blog.month}}</p>
+                    </div>
+                    <a href="#"><img src="{{blog.image}}" alt="image"></a>
+                </div>
+                <div class="blog-content">
+                    <h4><a href="#" class="title-content">{{blog.title}}</a></h4>
+                    <p class="text-content">{{blog.description}} </p>
+                    <div class="read-more">
+                        <a href="#" class="link-read-more">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

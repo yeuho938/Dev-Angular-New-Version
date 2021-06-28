@@ -6,24 +6,24 @@ export const USER_MENU = [
   {
     text: 'FLOWER',
     link: '/client/flowers',
-    items: [
-        {
-            text: 'List flowers',
-            link: '/client/flowers'
-        },
-      {
-        text: 'Latest flowers',
-        link: '/client/flower/latest'
-      },
-      {
-        text: 'Outstanding flowers',
-        link: '/client/flower/outstanding'
-      }
-    ]
+    // items: [
+    //     {
+    //         text: 'List flowers',
+    //         link: '/client/flowers'
+    //     },
+    //   {
+    //     text: 'Latest flowers',
+    //     link: '/client/flower/latest'
+    //   },
+    //   {
+    //     text: 'Outstanding flowers',
+    //     link: '/client/flower/outstanding'
+    //   }
+    // ]
   },
   {
     text: 'BLOG',
-    link: '/client/checkout'
+    link: '/client/blog'
   },
   {
     text: 'ABOUT US',

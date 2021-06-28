@@ -1,5 +1,5 @@
 <div class="shop-sidebar-wrap">
-    <div class="filter-price-wrapper">
+    <div class="filter-price-wrapper" *ngIf="!isBlogPage">
         <h4 class="title">FILTER BY PRICE</h4>
         <hr class="underlined">
         <div class="filter-price-cont">
@@ -38,7 +38,7 @@
             <li class="item cate"><a href="#">{{item.name}} <span>({{item.number}})</span></a></li>
         </ul>
     </div>
-    <div class="best-flower-wrapper">
+    <div class="best-flower-wrapper" *ngIf="!isBlogPage">
         <h4 class="title">BEST FLOWER</h4>
         <hr class="underlined">
         <dx-list
@@ -58,7 +58,27 @@
             </div>
         </dx-list>
     </div>
-    <div class="color-wrapper">
+    <div class="latest-blog-wrapper" *ngIf="isBlogPage">
+        <h4 class="title">LATEST BLOGS </h4>
+        <hr class="underlined">
+        <dx-list
+            [dataSource]="latestBlogs"
+            [searchEnabled]="false">
+            <div *dxTemplate="let item of 'item'" class="list-latest-blog">
+                <div class="blog-image">
+                    <img src="{{item.image}}" alt="image"/>
+                </div>
+                <div class="content">
+                    <h5>{{item.title}}</h5>
+                    <a class="date">
+                        {{item.day}} {{item.month}}
+                        <span>By Admin</span>
+                    </a>
+                </div>
+            </div>
+        </dx-list>
+    </div>
+    <div class="color-wrapper" *ngIf="!isBlogPage">
         <h4 class="title">COLOR</h4>
         <hr class="underlined">
         <ul class="list-item color" *ngFor="let item of listColors">

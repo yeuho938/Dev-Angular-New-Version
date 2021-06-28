@@ -1,0 +1,74 @@
+.main-content-wrap{
+    margin-top: 100px;
+}
+.about-us-contents {
+    span {
+        color: red;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .about-us-btn {
+        background-color: #ff5151;
+        padding: 10px;
+        width: 30%;
+        text-align: center;
+
+        a {
+            color: white;
+            font-size: 16px;
+        }
+    }
+}
+
+.project-count-area {
+    background-image: url("../../../../../assets/images/about-us/counter-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    //height: 250px;
+    padding: 80px 0;
+    margin: 50px 0;
+
+    .single-fun-factor {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px 0;
+
+        .counter-plus {
+            color: red;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .name-project {
+            font-size: 18px;
+            color: white;
+        }
+
+        &:hover {
+            border: 1px solid red;
+        }
+    }
+}
+
+.team-admin-area {
+    margin: 20px 0 0 0;
+
+    .persons-social {
+        padding: 0;
+        display: flex;
+
+        li {
+            list-style-type: none;
+            color: black;
+            font-size: 16px;
+            padding: 0 10px 0 0;
+        }
+    }
+}
+
+.testimonial-area-about-us-page {
+    margin: 20px 0 100px 0;
+}

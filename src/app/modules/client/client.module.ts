@@ -22,6 +22,10 @@ import {
 } from 'devextreme-angular';
 
 import {ThemeModule} from '@app/theme';
+import { ContactComponent } from './components/contact/contact.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { ListBlogComponent } from './components/blog/list-blog/list-blog.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 const COMPONENTS = [
@@ -48,7 +52,11 @@ const DEVEXTREME_MODULES = [
 
 @NgModule({
     declarations: [
-        ...COMPONENTS
+        ...COMPONENTS,
+        ContactComponent,
+        BlogComponent,
+        ListBlogComponent,
+        AboutUsComponent
     ],
     exports: [
         HeaderComponent,
@@ -93,26 +101,18 @@ const DEVEXTREME_MODULES = [
                         path: 'order',
                         component: OrdersClientComponent,
                     },
-                    // {
-                    //     // To fix the top menu issue
-                    //     path: 'boats',
-                    //     component: RouterOutletComponent,
-                    //     children: [
-                    //         {path: '', redirectTo: 'partners', pathMatch: 'full'},
-                    //         {
-                    //             path: 'partners',
-                    //             component: PartnersComponent
-                    //         },
-                    //         {
-                    //             path: 'list',
-                    //             component: BoatsComponent
-                    //         },
-                    //         {
-                    //             path: 'schedule',
-                    //             component: ScheduleComponent
-                    //         }
-                    //     ]
-                    // },
+                    {
+                        path: 'blog',
+                        component: BlogComponent,
+                    },
+                    {
+                        path: 'contact',
+                        component: ContactComponent,
+                    },
+                    {
+                        path: 'about',
+                        component: AboutUsComponent,
+                    },
                 ]
             }
         ]),

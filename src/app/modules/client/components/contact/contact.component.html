@@ -1,0 +1,83 @@
+<div class="contact-page">
+    <div class="breadcrumb-area">
+        <app-breadcrumb [titleBreadcrumb]="titleBreadcrumb"
+                        [breadcrumbItem]="breadcrumbItem">
+        </app-breadcrumb>
+    </div>
+    <div class="container contact">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12">
+                <div class="contact-form">
+                    <div class="contact-title">
+                        <h3><strong>TELL US YOUR PROJECT</strong></h3>
+                    </div>
+                    <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
+                        <div class="contact-form">
+                            <div class="contact-input">
+                                <div class="row">
+                                    <div class="col-md-6 contact-inner">
+                                        <dx-text-box [height]="40" class="input-name"
+                                                     placeholder="Name * ">
+                                        </dx-text-box>
+                                    </div>
+                                    <div class="col-md-6 contact-inner">
+                                        <dx-text-box [height]="40" class="input-email"
+                                                     placeholder="Email * ">
+                                        </dx-text-box>
+                                    </div>
+                                    <div class="col-md-6 contact-inner">
+                                        <dx-text-box [height]="40" class="input-phone"
+                                                     placeholder="Phone * ">
+                                        </dx-text-box>
+                                    </div>
+                                    <div class="col-md-6 contact-inner">
+                                        <dx-text-box [height]="40" class="input-subject"
+                                                     placeholder="Subject * ">
+                                        </dx-text-box>
+                                    </div>
+                                    <div class="col-md-12 contact-inner">
+                                        <dx-text-area [height]="120" placeholder="Message *">
+                                        </dx-text-area>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-submit-btn">
+                                <dx-button
+                                    class="btn-send-email"
+                                    stylingMode="contained"
+                                    text="Send Email"
+                                    type="submit"
+                                    [width]="140"
+                                    [height]="45"
+                                    (onClick)="click(' Send email ')">
+                                </dx-button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div class="contact-info">
+                    <div class="contact-title">
+                        <h3><strong>CONTACT US</strong></h3>
+                    </div>
+                    <div class="contact-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nam ex odio expedita, officia
+                            temporibus ipsum, placeat magni quibusdam sint, atque distinctio </p>
+                    </div>
+                    <div class="contact-address">
+                        <ul class="list-item">
+                            <li class="item"> Address : No 40 Baria Sreet 133/2 NewYork City</li>
+                            <li class="item"> Infor@chairman.com</li>
+                            <li class="item">0(1234) 567 890</li>
+                        </ul>
+                    </div>
+                    <div class="work-hours">
+                        <h4>Working hours</h4>
+                        <p><strong>Monday &ndash; Saturday</strong>: &nbsp;08AM &ndash; 22PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

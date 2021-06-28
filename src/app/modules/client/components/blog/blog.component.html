@@ -1,0 +1,19 @@
+<div class="blog-page">
+    <div class="breadcrumb-area">
+        <app-breadcrumb [titleBreadcrumb]="titleBreadcrumb"
+                        [breadcrumbItem]="breadcrumbItem">
+        </app-breadcrumb>
+    </div>
+    <div class="list-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 left-sidebar-blog ">
+                    <app-left-sidebar [isBlogPage]="isBlogPage"></app-left-sidebar>
+                </div>
+                <div class="col-lg-9 right-content-blog">
+                    <app-list-blog></app-list-blog>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

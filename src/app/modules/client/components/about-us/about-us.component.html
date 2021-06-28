@@ -1,0 +1,74 @@
+<div class="about-us-page">
+    <div class="breadcrumb-area">
+        <app-breadcrumb [titleBreadcrumb]="titleBreadcrumb"
+                        [breadcrumbItem]="breadcrumbItem">
+        </app-breadcrumb>
+    </div>
+    <div class="main-content-wrap">
+        <div class="about-us-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-us-contents">
+                            <h2>Welcome To <span>Fultala</span></h2>
+                            <p class="description">There are many variations of passages of Lorem Ipsum available, buthe majority have
+                                suffered alteration in some form, by injeed randomised words which don't look even
+                                sliglieable.All the Lorem Ipsum generators on the Internet tend to repe
+                                defined chunks as necessary, making this the first true generator on the Internet. It
+                                uses </p>
+                            <div class="about-us-btn">
+                                <a href="#">LEARN NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 ">
+                        <div class="about-us-image text-right">
+                            <img src="assets/images/about-us/about-us.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-count-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6" *ngFor="let counter of projectCounter">
+                            <div class="single-fun-factor">
+                                <div class="counter text-center">
+                                    <h3 class="counter-plus"><span class="counter-active">{{counter.counter}}</span>+</h3>
+                                    <p class="name-project">{{counter.name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="team-admin-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" *ngFor="let teamAdmin of teamAdmins">
+                    <div class="single-team mt--30">
+                        <div class="single-team-image">
+                            <img src="{{teamAdmin.image}}" alt="">
+                        </div>
+                        <div class="single-team-info">
+                            <h5>{{teamAdmin.name}}</h5>
+                            <p>{{teamAdmin.job}}</p>
+                        </div>
+                        <ul class="persons-social">
+                            <li *ngFor="let icon of socialIcons"><a href="#"><i class="{{icon}}"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-area-about-us-page">
+        <app-testimonial></app-testimonial>
+    </div>
+</div>
