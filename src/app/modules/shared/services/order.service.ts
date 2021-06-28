@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { random } from 'lodash';
 import {randomOrderById, randomOrders} from '@app/data/client/order.mock';
-import { Order } from '../models';
+import {Flower, Order} from '../models';
 import { LoadParamModel, LoadResultModel } from '../models/Load';
+import {randomEightFlowers} from "@app/data/admin/flower.mock";
 @Injectable({
   providedIn: 'root'
 })
@@ -22,6 +23,9 @@ export class OrderService {
   deleteOrder(param: number): Observable<boolean> {
     return of(true);
   }
+    getAllOrders(): Observable<Order[]> {
+        return of(randomOrders(5));
+    }
 }
 
 

@@ -14,6 +14,7 @@ export class HeaderComponent {
 
     @Output() menuToggle = new EventEmitter<boolean>();
     isOpenCartBox = false;
+    isOpenInfoUser = false;
     menuItems = USER_MENU;
 
     constructor() {
@@ -21,6 +22,10 @@ export class HeaderComponent {
 
     onHoverIconCart() {
         this.isOpenCartBox = !this.isOpenCartBox;
+    }
+
+    onHoverIconUser() {
+        this.isOpenInfoUser = !this.isOpenInfoUser;
     }
 
     onSubmenuShowing(e) {

@@ -77,15 +77,27 @@
                 <button class="btn-search"><i class="fas fa-search"></i></button>
                 <input type="text" class="input-search" placeholder="Search...">
             </div>
-            <div class="wishlist-icons">
-                <i class="far fa-heart" routerLink="/client/wishlist"></i>
+            <div class="user-icon" (mouseover)='onHoverIconUser()'>
+                <i class="far fa-user" ></i>
             </div>
-            <div class="cart-icons"  (mouseover)='onHoverIconCart()' >
-                <i class="fas fa-shopping-cart" routerLink="/client/cart"></i>
+            <div class="wishlist-icons">
+                <i class="far fa-heart" routerLink="/client/wishlist"><span>4</span></i>
+            </div>
+            <div class="cart-icons" (mouseover)='onHoverIconCart()'>
+                <i class="fas fa-shopping-cart" routerLink="/client/cart"><span>4</span></i>
             </div>
         </div>
     </dxi-item>
 </dx-toolbar>
 <div class="cart-box-area" *ngIf="isOpenCartBox">
     <app-cart-box></app-cart-box>
+</div>
+<div class="info-user" *ngIf="isOpenInfoUser">
+    <ul class="list-info-user">
+        <li class="item-info-user login"><a>Register</a>/ <a>Login</a></li>
+        <li class="item-info-user userName"><a>Ho Thi Yeu</a></li>
+        <li class="item-info-user"><a>My profile</a></li>
+        <li class="item-info-user"><a routerLink="/client/order">My Order</a></li>
+        <li class="item-info-user logOut"><a>Logout</a></li>
+    </ul>
 </div>

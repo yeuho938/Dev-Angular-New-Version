@@ -17,7 +17,7 @@ export function randomOrders(count: number): Order[] {
             flowerImage: faker.image.nature(),
             flowerPrice: faker.random.number(),
             flowerDescription: faker.random.words(10),
-            flowerQuantity: faker.random.number(200),
+            flowerQuantity: faker.random.number(10),
             totalPrice: faker.random.number(),
         });
     });

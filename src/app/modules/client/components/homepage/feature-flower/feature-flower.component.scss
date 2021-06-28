@@ -1,14 +1,33 @@
+.feature-flower {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.section-title.text-center {
+    span {
+        color: red;
+    }
+
+    .feature-flower-title {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .feature-flower-description {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
 ::ng-deep .feature-flower-grid {
     font-family: Raleway, sans-serif;
     text-align: center;
-    //padding: 0 0 72px;
+    padding: 0 0 72px;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    //margin-bottom: 20px;
-    width: 60%;
-    margin: 0 0 !important;
-    padding: 0 0 !important;
+    margin-bottom: 20px;
+
     &:hover {
         border-bottom: 1px solid orangered;
     }
@@ -181,32 +200,4 @@
         margin-bottom: 30px
     }
 }
-//}
-//.dx-item.dx-gallery-item{
-//    width: 100% !important;
-//}
-//.dx-template-wrapper.dx-item-content.dx-gallery-item-content{
-//    width: 50% !important;
-//}
-//
-//.dx-gallery-item{
-//    width: 60% !important;
-//}
-//.dx-gallery-container{
-//    width: 85%;
-//    margin: 0 auto!important;
-//}
-//.dx-item.dx-gallery-item{
-//    width: 100%;
-//}
-::ng-deep .dx-gallery{
-    margin: 0 auto;
-}
-//::ng-deep .dx-gallery-item {
-//    max-width: 30%;
-//}
-//::ng-deep .dx-gallery-item .image-item {
-//    max-width: 100%;
-//    height: 100%;
-//}
-//
+

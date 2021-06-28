@@ -1,3 +1,135 @@
-<p>
-  orders-client works!
-</p>
+<div class="order-page">
+    <div class="breadcrumb-area">
+        <app-breadcrumb [titleBreadcrumb]="titleBreadcrumb"
+                        [breadcrumbItem]="breadcrumbItem">
+        </app-breadcrumb>
+    </div>
+    <div class="content-order-page">
+        <div class="left-navigation">
+            <ul>
+                <li>
+                    <img src="https://i.pinimg.com/originals/e7/a5/21/e7a521f8cbaf2b270cfbab798837e192.jpg" width="60"
+                         height="60" />
+                    <a>Ho Thi Yeu</a>
+                </li>
+                <li>
+                    <a> <i class="far fa-user"></i>
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a> <i class="fas fa-clipboard-list"></i>
+                        My Order
+                    </a>
+                </li>
+                <li>
+                    <a> <i class="far fa-bell"></i>
+                        Notification
+                    </a>
+                </li>
+                <li>
+                    <a> <i class="fas fa-sign-out-alt"></i>
+                        LogOut
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-content-order">
+            <div class="order-filter">
+                <div class="order-filter tab-title">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="onToggleTab('order')">All orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="onToggleTab('unpaid')">Unpaid</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="onToggleTab('process')">Processing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="onToggleTab('shipped')">Shipped</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="onToggleTab('review')">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="onToggleTab('return')">Returns</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <dx-load-panel *ngIf="loadingVisible" [visible]="loadingVisible" [showPane]="false"
+                                   (onShown)="onShown()">
+                    </dx-load-panel>
+                    <div [ngSwitch]="changeTabContent" class="tab-description">
+                        <div *ngSwitchCase="'order'">
+                            <div class="all-orders" *ngFor="let order of listOrder">
+                                <div class="info-flower-area">
+                                    <div class="image">
+                                        <img src="{{order.flowerImage}}" width="100" height="100"/>
+                                    </div>
+                                    <div class="name-quantity">
+                                        <h3>{{order.flowerName}}</h3>
+                                        <p>x {{order.flowerQuantity}}</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>{{order.flowerPrice| currency: 'VND':true:'1.0'}}</p>
+                                    </div>
+                                </div>
+                                <div class="total-price">
+                                    <h3><i class="fas fa-dollar-sign"></i> Total Price:
+                                        <span>
+                                            {{order.totalPrice| currency: 'VND':true:'1.0'}}
+                                        </span>
+                                    </h3>
+                                    <p><i class="fas fa-truck-moving"></i> Delivery successful</p>
+                                </div>
+                                <div class="status-review">
+                                    <dx-button
+                                        class="btn-review"
+                                        stylingMode="contained"
+                                        text="Reviews"
+                                        type="submit"
+                                        [width]="120"
+                                        [height]="40"
+                                    >
+                                    </dx-button>
+                                    <dx-button
+                                        class="btn-view-detail"
+                                        stylingMode="contained"
+                                        text="View"
+                                        type="submit"
+                                        [width]="120"
+                                        [height]="40"
+                                    >
+                                    </dx-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngSwitchCase="'unpaid'" class="unpaid-part">
+                            <img src="assets/images/not-order.png"  alt="image" class="img"/>
+                            <h3>No orders yet</h3>
+                        </div>
+                        <div *ngSwitchCase="'process'" class="process-part">
+                            <img src="assets/images/not-order.png"  alt="image" class="img"/>
+                            <h3>No orders yet</h3>
+                        </div>
+                        <div *ngSwitchCase="'shipped'" class="shipped-part">
+                            <img src="assets/images/not-order.png"  alt="image" class="img"/>
+                            <h3>No orders yet</h3>
+                        </div>
+                        <div *ngSwitchCase="'review'" class="review-part">
+                            <img src="assets/images/not-order.png"  alt="image" class="img"/>
+                            <h3>No orders yet</h3>
+                        </div>
+                        <div *ngSwitchCase="'return'" class="return-part">
+                            <img src="assets/images/not-order.png" alt="image" class="img"/>
+                            <h3>No orders yet</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

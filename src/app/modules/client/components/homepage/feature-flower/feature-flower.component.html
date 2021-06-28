@@ -5,16 +5,9 @@
             the majority have
             suffered lobbied alteration in some Redid form</p>
     </div>
-    <dx-gallery
-        [dataSource]="allFlowers"
-        [height]="300"
-        [width]="600"
-        [initialItemWidth]="850"
-        [loop]="true"
-        [wrapAround]="true"
-        [showIndicator]="false">
-        <div class="list-feature-flower">
-            <div *dxTemplate="let flower of 'item'">
+    <div class="list-feature-flower">
+        <div class="row">
+            <div *ngFor="let flower of featureFlowers" class="col-md-3 col-sm-6">
                 <div class="feature-flower-grid">
                     <div class="flower-image">
                         <a href="#">
@@ -38,5 +31,5 @@
                 </div>
             </div>
         </div>
-    </dx-gallery>
+    </div>
 </div>

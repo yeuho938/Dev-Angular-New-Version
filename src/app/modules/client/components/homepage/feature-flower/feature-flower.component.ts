@@ -8,7 +8,7 @@ import {Flower} from '@app/modules/shared/models';
   styleUrls: ['./feature-flower.component.scss']
 })
 export class FeatureFlowerComponent implements OnInit {
-    allFlowers: Flower[];
+    featureFlowers: Flower[];
   constructor(public flowerService: FlowerService) { }
 
   ngOnInit() {
@@ -16,8 +16,8 @@ export class FeatureFlowerComponent implements OnInit {
   }
 
     getAllFlowers() {
-        this.flowerService.getAllFlower().subscribe((flower) => {
-            this.allFlowers = flower;
+        this.flowerService.getFeatureFlower().subscribe((flower) => {
+            this.featureFlowers = flower;
         });
     }
 }

@@ -1,3 +1,22 @@
 ::ng-deep .header-client{
   margin-bottom: 30px;
 }
+
+.section-title.text-center {
+    span {
+        color: red;
+    }
+
+    .all-flower-title {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .all-flower-description {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+.all-flower-area{
+    margin: 50px auto;
+}

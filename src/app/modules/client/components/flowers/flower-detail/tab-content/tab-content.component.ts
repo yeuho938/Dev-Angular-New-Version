@@ -16,6 +16,7 @@ export class TabContentComponent implements OnInit {
     detailFlower: Flower;
     dataFeature = DATA_DETAIL;
     dataSheet = DATA_SHEET;
+
     constructor(public flowerService: FlowerService) {
     }
 
@@ -35,6 +36,7 @@ export class TabContentComponent implements OnInit {
             this.detailFlower = flower;
         });
     }
+
     onShown() {
         setTimeout(() => {
             this.loadingVisible = false;
