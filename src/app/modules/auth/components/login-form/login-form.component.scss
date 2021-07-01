@@ -1,18 +1,40 @@
-//@import "../../../../themes/generated/variables.base.scss";
+@import "variables";
+
 $base-text-color: rgba(0, 0, 0, 0.87);
+.login-page {
+    width: 100%;
+    height: 100%;
+}
+
 .login-form {
-  .link {
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-
-    a {
-      text-decoration: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 50%;
+    height: 70%;
+    padding: 5%;
+    margin: 5% auto;
+    .title-login{
+        text-align: center;
+        margin-bottom: 40px;
     }
-  }
+    .link {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
 
-  ::ng-deep .form-text {
-    margin: 10px 0;
-    color: rgba($base-text-color, alpha($base-text-color) * 0.7);
-  }
+        a {
+            text-decoration: none;
+            color: #ff5151;
+        }
+    }
+
+    ::ng-deep .dx-button-content {
+        background-color: #ff5151;
+        border: none;
+        color: white;
+    }
+
+    ::ng-deep .form-text {
+        margin: 10px 0;
+        color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+    }
 }

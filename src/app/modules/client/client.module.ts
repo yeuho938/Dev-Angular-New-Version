@@ -26,6 +26,12 @@ import { ContactComponent } from './components/contact/contact.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ListBlogComponent } from './components/blog/list-blog/list-blog.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ListOrderComponent } from './components/orders/list-order/list-order.component';
+import {AuthModule} from '@app/modules/auth/auth.module';
+import {LoginFormComponent} from '@app/modules/auth/components/login-form/login-form.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AccountComponent } from './components/profile/account/account.component';
+import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
 
 
 const COMPONENTS = [
@@ -56,7 +62,11 @@ const DEVEXTREME_MODULES = [
         ContactComponent,
         BlogComponent,
         ListBlogComponent,
-        AboutUsComponent
+        AboutUsComponent,
+        ListOrderComponent,
+        ProfileComponent,
+        AccountComponent,
+        OrderDetailComponent
     ],
     exports: [
         HeaderComponent,
@@ -66,6 +76,7 @@ const DEVEXTREME_MODULES = [
         CommonModule,
         SharedModule,
         ThemeModule,
+        AuthModule,
         ...DEVEXTREME_MODULES,
         RouterModule.forChild([
             {
@@ -112,6 +123,18 @@ const DEVEXTREME_MODULES = [
                     {
                         path: 'about',
                         component: AboutUsComponent,
+                    },
+                    {
+                        path: 'login',
+                        component: LoginFormComponent,
+                    },
+                    {
+                        path: 'profile',
+                        component: ProfileComponent,
+                    },
+                    {
+                        path: 'order/:id',
+                        component: OrderDetailComponent,
                     },
                 ]
             }

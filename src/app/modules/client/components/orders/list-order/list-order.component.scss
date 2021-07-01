@@ -1,0 +1,67 @@
+.list-orders {
+    padding: 10px;
+    margin: 50px 0;
+
+    .info-flower-area {
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        display: grid;
+        grid-template-columns: 0.8fr 3fr 1fr;
+        grid-column-gap: 10px;
+        padding: 10px;
+        .name-flower{
+            font-size: 20px;
+        }
+        .price-flower {
+            float: right;
+            .price{
+                float: right;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .order-total-price-area {
+        margin: 10px 0;
+        padding: 10px 0 30px;
+
+        .order-total-price {
+            float: right;
+            font-size: 20px;
+        }
+
+        span {
+            color: red;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+
+    .status-review {
+        float: right;
+        display: flex;
+        margin: 10px 0;
+
+        .btn-review {
+            font-size: 15px;
+            background-color: #ff5151;
+            color: white;
+            margin-right: 10px;
+
+            &:hover {
+                transition: 0.3s all;
+                background-color: black;
+            }
+        }
+        .btn-view-detail{
+            font-size: 15px;
+            background-color: #ddd;
+            color: black;
+            &:hover {
+                transition: 0.3s all;
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

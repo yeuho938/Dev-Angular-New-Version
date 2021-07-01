@@ -1,0 +1,56 @@
+.detail-order-page {
+    width: 60%;
+    margin: 50px auto;
+}
+
+.info-transport {
+    display: flex;
+
+    .info-address {
+        margin-right: 20px;
+        padding-right: 20px;
+        border-right: 1px solid #ddd;
+    }
+
+}
+
+.info-flower-area {
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    display: grid;
+    grid-template-columns: 0.8fr 3fr 1fr;
+    grid-column-gap: 10px;
+    padding: 10px;
+
+    .name-flower {
+        font-size: 20px;
+    }
+
+    .price-flower {
+        float: right;
+
+        .price {
+            float: right;
+            font-size: 16px;
+        }
+    }
+}
+
+.info-price {
+    margin: 20px 0;
+    width: 60%;
+    float: right;
+    p {
+        font-size: 16px;
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    span {
+        float: right;
+    }
+    .total{
+        color: red;
+        font-size: 17px;
+        font-weight: bold;
+    }
+}

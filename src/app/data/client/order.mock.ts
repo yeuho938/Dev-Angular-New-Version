@@ -13,11 +13,12 @@ export function randomOrders(count: number): Order[] {
             userEmail: faker.internet.email(),
             cartId: faker.random.number(100),
             flowerId: faker.random.number(100),
-            flowerName: faker.name.findName(),
+            flowerName: faker.random.words(3),
             flowerImage: faker.image.nature(),
             flowerPrice: faker.random.number(),
             flowerDescription: faker.random.words(10),
-            flowerQuantity: faker.random.number(10),
+            flowerQuantity: random(1, 20),
+            status: random(1, 4),
             totalPrice: faker.random.number(),
         });
     });
@@ -32,11 +33,12 @@ export function randomOrderById(param: number): Order {
         userEmail: faker.internet.email(),
         cartId: faker.random.number(100),
         flowerId: faker.random.number(100),
-        flowerName: faker.name.findName(),
+        flowerName: faker.random.words(4),
         flowerImage: faker.image.nature(),
         flowerPrice: faker.random.number(),
         flowerDescription: faker.random.words(10),
-        flowerQuantity: faker.random.number(200),
+        flowerQuantity: random(1, 20),
+        status: random(1, 4),
         totalPrice: faker.random.number(),
     });
 }

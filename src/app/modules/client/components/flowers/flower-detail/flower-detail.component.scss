@@ -21,7 +21,7 @@
 }
 
 .flower_price {
-    padding: 0!important;
+    padding: 0 !important;
 
     .li-item {
         font-size: 18px;
@@ -33,14 +33,17 @@
         }
     }
 }
-.flower-quantity-action{
+
+.flower-quantity-action {
     display: flex;
-    .title-quantity{
+
+    .title-quantity {
         font-size: 15px;
         padding-right: 10px;
         padding-top: 8px;
     }
 }
+
 .flower-social_share {
     display: flex;
 
@@ -99,12 +102,35 @@
 
     .flower_choose_color {
         display: flex;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    ::ng-deep .dx-field-value{
+        float: left;
+    }
+    ::ng-deep .dx-field-label{
+        //width: 15%;
+    }
+    ::ng-deep .Gray .dx-radiobutton-checked .dx-radiobutton-icon .dx-radiobutton-icon-dot {
+        background: gray;
+    }
+    ::ng-deep .Green .dx-radiobutton-checked .dx-radiobutton-icon .dx-radiobutton-icon-dot {
+        background: green;
+    }
+    ::ng-deep .Orange .dx-radiobutton-checked .dx-radiobutton-icon .dx-radiobutton-icon-dot {
+        background: orange;
+    }
+    ::ng-deep .Red .dx-radiobutton-checked .dx-radiobutton-icon .dx-radiobutton-icon-dot {
+        background: red;
     }
 }
-#tab-content{
+
+#tab-content {
     margin: 40px 0;
     width: 100%;
 }
+
 app-tab-content {
     width: 100%;
 }

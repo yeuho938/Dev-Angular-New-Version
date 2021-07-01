@@ -23,10 +23,15 @@
                         <div class="flower_color">
                             <h3 class="title_color">Choose Colour</h3>
                             <ul class="flower_choose_color">
-                                <li class="li-item red"><a href="#"><i class="ion-record"></i></a></li>
-                                <li class="li-item blue"><a href="#"><i class="ion-record"></i></a></li>
-                                <li class="li-item perl"><a href="#"><i class="ion-record"></i></a></li>
-                                <li class="li-item yellow"><a href="#"><i class="ion-record"></i></a></li>
+                                <div class="dx-field">
+                                    <div class="dx-field-value">
+                                        <dx-radio-group
+                                            [items]="colors"
+                                            [(value)]="colors"
+                                            [ngClass]="colors">
+                                        </dx-radio-group>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="flower-quantity-action">

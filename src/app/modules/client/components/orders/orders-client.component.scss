@@ -1,60 +1,27 @@
-.order-page {
-    width: 80%;
-    margin: 0 auto;
-
-    .order-filter {
-        margin: 50px 0 100px 0;
-    }
-}
 
 .content-order-page {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    margin: 0 auto;
     grid-column-gap: 20px;
 }
 
-/// Navigation
-.left-navigation {
-    ul {
-        padding: 0;
-
-        li {
-            list-style-type: none;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-
-            img {
-                border-radius: 50%;
-            }
-
-            a {
-                color: black;
-                font-size: 15px;
-
-                &:hover {
-                    color: red;
-                }
-            }
-        }
-    }
-}
-
-/// TAB
 .tab-content {
     max-width: 100%;
     justify-content: center;
     margin: 0 auto;
 }
 
-.tab-title {
+.order-filter.tab-title {
     width: 100%;
     justify-content: center;
     border-bottom: 1px solid #ddd;
+    margin-top: 10px !important;
+    margin-bottom: 50px !important;
 
     .nav-link {
         color: black;
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 400;
     }
 }
 
@@ -72,61 +39,10 @@
     color: red;
 }
 
-/// All order
-.all-orders {
-    padding: 10px;
-    margin: 20px 0;
-
-    .info-flower-area {
-        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-        display: grid;
-        grid-template-columns: 0.8fr 3fr 1fr;
-        grid-column-gap: 10px;
-        padding: 10px;
-
-        .price {
-            float: right;
-        }
-    }
-
-    .total-price {
-        margin: 10px 0;
-        padding: 10px 0 30px;
-
-        h3 {
-            float: right;
-        }
-
-        span {
-            color: red;
-        }
-    }
-
-    .status-review {
-        display: flex;
-        margin: 10px 0;
-
-        .btn-view-detail, .btn-review {
-            font-size: 15px;
-            background-color: #ff5151;
-            color: white;
-            margin-right: 10px;
-
-            &:hover {
-                transition: 0.3s all;
-                background-color: black;
-            }
-        }
+.tab-description{
+    .not-order{
+        justify-content: center;
+        text-align: center;
     }
 }
 
-
-.unpaid-part, .process-part, .shipped-part, .review-part, .return-part {
-    justify-content: center;
-    text-align: center;
-
-    img {
-        width: 100px;
-        height: 100px;
-    }
-}

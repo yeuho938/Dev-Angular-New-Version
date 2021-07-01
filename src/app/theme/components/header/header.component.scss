@@ -195,7 +195,7 @@
 }
 
 .list-item-right.dx-template-wrapper.dx-item-content.dx-toolbar-item-content {
-    padding: 0 0 0 100%;
+    padding: 0 0 0 90%;
 }
 
 ::ng-deep .search-box {
@@ -206,7 +206,7 @@
     .input-search {
         height: 40px;
         width: 50px;
-        margin-left: -300px;
+        //margin-left: -100px;
         border-style: none;
         padding: 10px 40px 10px 10px;
         font-size: 18px;
@@ -224,6 +224,7 @@
         }
 
         &:focus {
+            margin-left: -270px;
             width: 300px;
             border-radius: 20px;
             background-color: #f7f9fc;
@@ -235,6 +236,7 @@
     .btn-search {
         width: 50px;
         height: 40px;
+        margin-left: -50px;
         border-style: none;
         font-size: 20px;
         font-weight: bold;
@@ -249,10 +251,11 @@
 
         &:focus ~ .input-search {
             width: 300px;
+            margin-left: -270px;
             background-color: #f7f9fc;
             border-bottom: 1px solid rgba(255, 255, 255, .5);
             border-radius: 20px;
-            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+            transition: all 700ms cubic-bezier(0, 0.110, 0.35, 2);
         }
     }
 
@@ -326,10 +329,40 @@
                 color: gray;
                 font-size: 16px;
             }
-            &:hover a{
+
+            &:hover a {
                 transition: 0.3s all;
                 color: red;
             }
         }
     }
 }
+
+/// Responsive
+
+@media screen and (max-width: 1358px) {
+   .dx-menu-horizontal {
+        margin: 0 20% !important;
+    }
+    .list-item-right{
+        margin: 10px 0 10px 200px!important;
+    }
+}
+
+@media screen and (max-width: 1294px)  and (max-width: 1210px){
+    .dx-menu-horizontal {
+        margin: 0 20% !important;
+    }
+    .list-item-right{
+        margin: 10px 0 10px 170px!important;
+    }
+    .list-item-right.dx-template-wrapper.dx-item-content.dx-toolbar-item-content {
+        padding: 0 0 0 60%;
+    }
+}
+@media screen and (max-width: 1210px){
+    .list-item-right.dx-template-wrapper.dx-item-content.dx-toolbar-item-content {
+        padding: 0 0 0 50%;
+    }
+}
+

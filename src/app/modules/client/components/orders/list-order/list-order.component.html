@@ -1,0 +1,96 @@
+<div class="list-orders" *ngFor="let order of listOrder">
+    <div *ngIf="order.status == statusNumber" class="list">
+        <div class="info-flower-area">
+            <div class="image">
+                <img src="{{order.flowerImage}}" width="100" height="100" alt="image"/>
+            </div>
+            <div class="name-quantity">
+                <h3 class="name-flower">{{order.flowerName}}</h3>
+                <p>x {{order.flowerQuantity}}</p>
+            </div>
+            <div class="price-flower">
+                <p class="price">{{order.flowerPrice| currency: 'VND':true:'1.0'}}</p>
+            </div>
+        </div>
+        <div class="order-total-price-area">
+            <h3 class="order-total-price">
+                <i class="fas fa-dollar-sign"></i>
+                Total Price:
+                <span>
+                {{order.totalPrice| currency: 'VND':true:'1.0'}}
+            </span>
+            </h3>
+            <p class="status-order"><i class="fas fa-truck-moving"></i> {{statusContent}}</p>
+        </div>
+        <div class="status-review">
+            <dx-button
+                class="btn-review"
+                stylingMode="contained"
+                text="Reviews"
+                type="submit"
+                [width]="120"
+                [height]="40"
+            >
+            </dx-button>
+            <dx-button
+                class="btn-view-detail"
+                stylingMode="contained"
+                text="View"
+                type="submit"
+                [width]="120"
+                [height]="40"
+            >
+            </dx-button>
+        </div>
+    </div>
+    <div *ngIf="statusNumber == 0">
+    <div class="info-flower-area">
+        <div class="image">
+            <img src="{{order.flowerImage}}" width="100" height="100" alt="image"/>
+        </div>
+        <div class="name-quantity">
+            <h3 class="name-flower">{{order.flowerName}}</h3>
+            <p>x {{order.flowerQuantity}}</p>
+        </div>
+        <div class="price-flower">
+            <p class="price">{{order.flowerPrice| currency: 'VND':true:'1.0'}}</p>
+        </div>
+    </div>
+    <div class="order-total-price-area">
+        <h3 class="order-total-price">
+            <i class="fas fa-dollar-sign"></i>
+            Total Price:
+            <span>
+                {{order.totalPrice| currency: 'VND':true:'1.0'}}
+            </span>
+        </h3>
+<!--        <p class="status-order"><i class="fas fa-truck-moving"></i> {{statusContent}}</p>-->
+    </div>
+    <div class="status-review">
+        <dx-button
+            class="btn-review"
+            stylingMode="contained"
+            text="Reviews"
+            type="submit"
+            [width]="120"
+            [height]="40"
+
+        >
+        </dx-button>
+        <dx-button
+            class="btn-view-detail"
+            stylingMode="contained"
+            text="View"
+            type="submit"
+            [width]="120"
+            [height]="40"
+            [routerLink]="['/client/order/', order.id]"
+        >
+        </dx-button>
+    </div>
+    </div>
+</div>
+<ng-template #noOrder>
+    <img src="assets/images/not-order.png" alt="image" class="img"/>
+    <h4>No orders yet</h4>
+</ng-template>

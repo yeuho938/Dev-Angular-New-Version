@@ -1,0 +1,46 @@
+.content-account {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 20px;
+    padding: 20px;
+}
+
+.title-account {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.left-content-form {
+    .btn-update {
+        margin: 10px auto;
+        text-align: center;
+        justify-content: center;
+    }
+    ::ng-deep .dx-field-value{
+        margin-right: 24%;
+    }
+    ::ng-deep .dx-field-label{
+        width: 15%;
+    }
+}
+
+.avatar-area {
+    border-left: 1px solid #ddd;
+    text-align: center;
+    height: 130px;
+    justify-content: center;
+    display: grid;
+    padding: 0 20%;
+    grid-template-columns: 1fr;
+
+    .avatar {
+        border-radius: 50%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn-choose-img {
+        justify-content: center;
+        text-align: center;
+    }
+}

@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { ActivatedRouteSnapshot, CanActivate, Router } from "@angular/router";
-import { AuthGuard } from ".";
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, Router } from '@angular/router';
+import {AuthGuard} from '@app/modules/auth/services/auth.guard';
 const defaultPath = '/';
 const defaultUser = {
   email: 'sandra@example.com',

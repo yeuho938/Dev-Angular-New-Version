@@ -10,12 +10,12 @@ import {Order} from '@app/modules/shared/models';
 export class OrdersClientComponent implements OnInit {
     titleBreadcrumb = 'Order';
     breadcrumbItem = 'My order';
-    changeTabContent: string;
+    changeTabContent = 'order';
     loadingVisible: boolean;
-    listOrder: Order[];
+    isDisplay: boolean;
     tabContent: any[];
     tabPanelIndex: number;
-
+    listOrder: Order[];
     constructor(public orderService: OrderService) {
     }
 

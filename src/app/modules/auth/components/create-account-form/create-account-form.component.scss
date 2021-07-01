@@ -1,0 +1,40 @@
+@import "variables";
+.sign-up-page{
+    width: 100%;
+}
+.create-account-form {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 50%;
+    height: 70%;
+    padding: 5%;
+    margin: 5% auto;
+    .title-sign-up{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .policy-info {
+        margin: 10px 0;
+        color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+        font-size: 14px;
+        font-style: normal;
+
+        a {
+            color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+        }
+    }
+
+    .login-link {
+        color: #ff5151;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+::ng-deep .dx-button-content {
+    background-color: #ff5151;
+    border: none;
+}
+.sign-in-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:  #ff5151;
+}
