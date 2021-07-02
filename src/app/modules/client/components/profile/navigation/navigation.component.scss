@@ -1,0 +1,27 @@
+.name-img{
+   margin-left: 20px;
+    img{
+        border-radius: 50%;
+    }
+    .name-user{
+        font-size: 16px;
+    }
+}
+.navigation-profile{
+    .navigation-item{
+        color: black;
+        font-size: 16px;
+        padding: 7px 0;
+        text-decoration: none;
+        &:hover{
+            transition: 0.4s all;
+            color: red;
+        }
+    }
+}
+::ng-deep .navigation-profile ul.dx-menu-items-container.dx-menu-no-icons {
+    width: 100%;
+}
+::ng-deep .dx-menu-vertical .dx-menu-item-wrapper{
+    border-bottom: 1px solid #ddd;
+}

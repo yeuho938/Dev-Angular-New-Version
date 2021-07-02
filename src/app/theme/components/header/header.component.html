@@ -80,11 +80,11 @@
             <div class="user-icon" (mouseover)='onHoverIconUser()'>
                 <i class="far fa-user" ></i>
             </div>
-            <div class="wishlist-icons">
-                <i class="far fa-heart" routerLink="/client/wishlist"><span>4</span></i>
+            <div class="wishlist-icons" routerLink="/client/wishlist">
+                <i class="far fa-heart" ><span>4</span></i>
             </div>
-            <div class="cart-icons" (mouseover)='onHoverIconCart()'>
-                <i class="fas fa-shopping-cart" routerLink="/client/cart"><span>4</span></i>
+            <div class="cart-icons" (mouseover)='onHoverIconCart()' routerLink="/client/cart">
+                <i class="fas fa-shopping-cart" ><span>4</span></i>
             </div>
         </div>
     </dxi-item>
@@ -96,8 +96,8 @@
     <ul class="list-info-user">
         <li class="item-info-user login"><a routerLink="/login-sign">Register</a>/ <a routerLink="/login-sign">Login</a></li>
         <li class="item-info-user userName"><a >Ho Thi Yeu</a></li>
-        <li class="item-info-user"><a routerLink="/client/profile">My profile</a></li>
-        <li class="item-info-user"><a routerLink="/client/profile" >My Order</a></li>
-        <li class="item-info-user logOut"><a routerLink="/login">Logout</a></li>
+        <li class="item-info-user"><a routerLink="/client/profile/account">My profile</a></li>
+        <li class="item-info-user"><a routerLink="/client/profile/order" >My Order</a></li>
+        <li class="item-info-user logOut"><a routerLink="/login-sign">Logout</a></li>
     </ul>
 </div>

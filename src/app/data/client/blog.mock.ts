@@ -8,7 +8,7 @@ export function randomBlogData(count: number): Blog[] {
             id: index + 1,
             title: faker.random.words(5),
             image: faker.image.nature(),
-            day: faker.random.number(30),
+            day: random(1, 30),
             month: faker.date.month(),
             description: faker.random.words(10),
         });

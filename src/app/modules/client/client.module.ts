@@ -22,17 +22,18 @@ import {
 } from 'devextreme-angular';
 
 import {ThemeModule} from '@app/theme';
-import { ContactComponent } from './components/contact/contact.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { ListBlogComponent } from './components/blog/list-blog/list-blog.component';
-import { AboutUsComponent } from './components/about-us/about-us.component';
-import { ListOrderComponent } from './components/orders/list-order/list-order.component';
+import {ContactComponent} from './components/contact/contact.component';
+import {BlogComponent} from './components/blog/blog.component';
+import {ListBlogComponent} from './components/blog/list-blog/list-blog.component';
+import {AboutUsComponent} from './components/about-us/about-us.component';
+import {ListOrderComponent} from './components/orders/list-order/list-order.component';
 import {AuthModule} from '@app/modules/auth/auth.module';
 import {LoginFormComponent} from '@app/modules/auth/components/login-form/login-form.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { AccountComponent } from './components/profile/account/account.component';
-import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
-
+import {ProfileComponent} from './components/profile/profile.component';
+import {AccountComponent} from './components/profile/account/account.component';
+import {OrderDetailComponent} from './components/orders/order-detail/order-detail.component';
+import {NavigationComponent} from './components/profile/navigation/navigation.component';
+import { AvatarComponent } from './components/profile/account/avatar/avatar.component';
 
 const COMPONENTS = [
     CartComponent, LeftSidebarComponent,
@@ -66,10 +67,13 @@ const DEVEXTREME_MODULES = [
         ListOrderComponent,
         ProfileComponent,
         AccountComponent,
-        OrderDetailComponent
+        OrderDetailComponent,
+        NavigationComponent,
+        AvatarComponent
     ],
     exports: [
         HeaderComponent,
+        ProfileComponent,
     ],
 
     imports: [
@@ -109,10 +113,6 @@ const DEVEXTREME_MODULES = [
                         component: WishlistComponent
                     },
                     {
-                        path: 'order',
-                        component: OrdersClientComponent,
-                    },
-                    {
                         path: 'blog',
                         component: BlogComponent,
                     },
@@ -131,10 +131,21 @@ const DEVEXTREME_MODULES = [
                     {
                         path: 'profile',
                         component: ProfileComponent,
-                    },
-                    {
-                        path: 'order/:id',
-                        component: OrderDetailComponent,
+                        children: [
+                            {path: '', redirectTo: 'account', pathMatch: 'full'},
+                            {
+                                path: 'account',
+                                component: AccountComponent
+                            },
+                            {
+                                path: 'order',
+                                component: OrdersClientComponent
+                            },
+                            {
+                                path: 'order/:id',
+                                component: OrderDetailComponent,
+                            },
+                        ]
                     },
                 ]
             }

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {OrderService} from '@app/modules/shared/services';
 import {Order} from '@app/modules/shared/models';
+import {TAB_TITLE} from '@app/modules/client/shared/tab-title-order';
 
 @Component({
     selector: 'app-orders-client',
@@ -16,6 +17,7 @@ export class OrdersClientComponent implements OnInit {
     tabContent: any[];
     tabPanelIndex: number;
     listOrder: Order[];
+    tabTitles = TAB_TITLE;
     constructor(public orderService: OrderService) {
     }
 

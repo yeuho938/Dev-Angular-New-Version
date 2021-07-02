@@ -8,7 +8,6 @@ import {Component, OnInit} from '@angular/core';
 export class ProfileComponent implements OnInit {
     titleBreadcrumb = 'Profile';
     breadcrumbItem = 'My profile';
-    content = 'account';
 
     constructor() {
     }
@@ -16,7 +15,4 @@ export class ProfileComponent implements OnInit {
     ngOnInit() {
     }
 
-    onToggleContent(val: string) {
-        this.content = val;
-    }
 }

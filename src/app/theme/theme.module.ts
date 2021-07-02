@@ -34,6 +34,7 @@ import {AutoFocusInputDirective} from './directives';
 import {DxDrawerModule} from 'devextreme-angular/ui/drawer';
 import { CartBoxComponent } from './components/cart-box/cart-box.component';
 import {AuthModule} from '@app/modules/auth/auth.module';
+import {ClientModule} from '@app/modules/client/client.module';
 
 //
 const DEVEXTREME_MODULES = [

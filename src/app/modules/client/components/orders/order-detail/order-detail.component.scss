@@ -1,11 +1,20 @@
 .detail-order-page {
-    width: 60%;
-    margin: 50px auto;
+    padding: 10px;
 }
-
+.return-list-order{
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    a{
+        font-size: 16px;
+        text-decoration: none;
+        &:hover{
+            color: red;
+        }
+    }
+}
 .info-transport {
     display: flex;
-
+    padding: 7px;
     .info-address {
         margin-right: 20px;
         padding-right: 20px;
@@ -15,11 +24,11 @@
 }
 
 .info-flower-area {
-    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     display: grid;
     grid-template-columns: 0.8fr 3fr 1fr;
     grid-column-gap: 10px;
-    padding: 10px;
+    padding: 15px 10px 10px 10px;
 
     .name-flower {
         font-size: 20px;

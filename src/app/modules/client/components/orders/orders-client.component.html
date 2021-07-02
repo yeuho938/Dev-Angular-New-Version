@@ -3,23 +3,8 @@
         <div class="order-filter">
             <div class="order-filter tab-title">
                 <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="onToggleTab('order')">All orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="onToggleTab('approval')">Awaiting approval</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="onToggleTab('pickup')">Awaiting pickup</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="onToggleTab('process')">Processing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="onToggleTab('delivered')">Delivered</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="onToggleTab('cancel' )">Cancel</a>
+                    <li class="nav-item" *ngFor="let tab of tabTitles">
+                        <a class="nav-link" (click)="onToggleTab(tab.value)">{{tab.title}}</a>
                     </li>
                 </ul>
             </div>
@@ -61,7 +46,8 @@
                         <div *ngFor="let item of listOrder">
                             <div *ngIf="item.status == 4">
                                 <app-list-order [statusNumber]="item.status"
-                                                [statusContent]="'Delivered'"></app-list-order>
+                                                [statusContent]="'Delivered'">
+                                </app-list-order>
                             </div>
                         </div>
                     </div>

@@ -39,6 +39,7 @@
                 type="submit"
                 [width]="120"
                 [height]="40"
+                [routerLink]="['/client/profile/order/', order.id]"
             >
             </dx-button>
         </div>
@@ -84,7 +85,7 @@
             type="submit"
             [width]="120"
             [height]="40"
-            [routerLink]="['/client/order/', order.id]"
+            [routerLink]="['/client/profile/order/', order.id]"
         >
         </dx-button>
     </div>

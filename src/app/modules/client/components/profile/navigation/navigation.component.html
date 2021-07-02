@@ -1,0 +1,25 @@
+<div class="name-img">
+    <img src="https://i.pinimg.com/originals/e7/a5/21/e7a521f8cbaf2b270cfbab798837e192.jpg" width="60"
+         height="60"/>
+    <p class="name-user">Ho Thi Yeu</p>
+</div>
+<div class="navigation">
+    <dx-menu
+        [elementAttr]="{ id: 'elementId', class: 'class-name' }"
+        class="navigation-profile"
+        [dataSource]="profileMenu"
+        displayExpr="text"
+        [showFirstSubmenuMode]="{name: 'onHover',delay: { show: 0, hide: 500 }}"
+        orientation="vertical"
+        submenuDirection="auto"
+        [hideSubmenuOnMouseLeave]="true"
+        (onSubmenuShowing)="onSubmenuShowing($event)">
+        <div *dxTemplate="let menu of 'item'">
+            <a [routerLink]="[menu.link]"
+               [ngClass]="(menu.items !== undefined && menu.items.length) ? 'has-child' : ''"
+               routerLinkActive="active" class="navigation-item">
+                <i *ngIf="menu.icon" [ngClass]="menu.icon ? menu.icon : ''"></i> {{menu.text}}
+            </a>
+        </div>
+    </dx-menu>
+</div>
